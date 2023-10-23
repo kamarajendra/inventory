@@ -3,7 +3,7 @@
 @section('content')
    <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Item</h1>
+    <h1 class="h3 mb-0 text-gray-800">Type</h1>
 </div>
 
 <div id="content-wrapper" class="d-flex flex-column">
@@ -24,7 +24,7 @@
                                 <div class="col mr-2">
                                     <div
                                         class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                        Jumlah Type</div>
+                                        Total Types</div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">123</div>
                                 </div>
                                 <div class="col-auto">
@@ -40,7 +40,7 @@
                 <div class="col-4">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Tambah Barang
+                            Add Type
                           </button>
                           <!-- Modal -->
                         <form action="{{route('staff.items')}}" method="POST" enctype="multipart/form-data" >
@@ -49,7 +49,7 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Tambah Barang</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Add Type</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -115,15 +115,6 @@
                             </div>
                         </form>
 
-
-                        <button type="button" class="btn btn-danger" data-toggle="modal"
-                            data-target="#exampleModal">
-                            Barang Keluar
-                        </button>
-                        <button type="button" class="btn btn-info" data-toggle="modal"
-                            data-target="#exampleModal">
-                            Barang Pindah
-                        </button>
                         <form action="" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -210,6 +201,20 @@
                             <td>Kelas 301</td>
                             <td>
                                 <button class="btn btn-primary">Edit</button>
+                                <button class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HP</td>
+                            <td>Prodesk 600 G6</td>
+                            <td>i9-23100</td>
+                            <td>DDR8 64GB</td>
+                            <td>SSD 5TB</td>
+                            <td>Kelas 101</td>
+                            <td>
+                                <button class="btn btn-primary">Edit</button>
+                                <button class="btn btn-danger">Delete</button>
                             </td>
                         </tr>
                        {{-- @foreach ($item as $i)

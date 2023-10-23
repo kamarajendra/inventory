@@ -33,6 +33,11 @@
             </div>
             <!-- Content Row -->
             <div class="row">
+                <div class="col-8">
+                     {{-- navbar --}}
+                     @include('layouts.navbar-setting')
+                     {{-- end navbar --}}
+                </div>
                 <div class="col-4">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -53,21 +58,25 @@
                                         <input type="text" class="form-control" name="name" id="name">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="book_author" class="form-label">Email</label>
-                                        <input type="text" class="form-control" id="email" name="email">
+                                        <label for="book_author" class="form-label">Unit</label>
+                                        {{-- <input type="text" class="form-control" id="unit" name="unit"> --}}
+                                        <select class="form-select" aria-label="Default select example" name="unit" id="unit">
+                                            @foreach ($unit as $u)                                                
+                                                <option value="-" selected>-</option>
+                                                <option value="{{ $u->unit }}" >{{ $u->unit }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="book_release" class="form-label">Unit</label>
-                                        <input type="text" class="form-control" id="section_group" name="section_group">
-                                    </div>
-                                    {{-- <div class="mb-3">
                                         <label for="book_release" class="form-label">Role</label>
-                                        <select class="form-select" aria-label="Default select example" id="role" name="role">
-                                            <option selected> </option>
-                                            <option value="guest">guest</option>
-                                            <option value="staff">staff</option>
-                                          </select>
-                                    </div> --}}
+                                        {{-- <input type="text" class="form-control" id="role" name="role"> --}}
+                                        <select class="form-select" aria-label="Default select example" name="role" id="role">
+                                            @foreach ($role as $r)                                                
+                                                <option value="-" selected>-</option>
+                                                <option value="{{ $r->role_name }}" >{{ $r->role_name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -79,7 +88,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-8">
+                {{-- <div class="col-8">
                     <div class="input-group mb-3">
                         <form
                             class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
@@ -95,7 +104,7 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> --}}
             </div>
             @if(Session::has('success'))
                 <div class="alert alert-success">
@@ -108,8 +117,8 @@
                         <tr>
                             <th scope="col">Nomor</th>
                             <th scope="col">Nama</th>
-                            <th scope="col">Email</th>
                             <th scope="col">Unit</th>
+                            <th scope="col">Role</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -118,8 +127,8 @@
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td><span class="bold">{{ $user->section_group }}</span></td>
+                                <td>{{ $user->unit }}</td>
+                                <td><span class="bold">{{ $user->role }}</span></td>
                                 <td>
                                     <div class="row">
                                         <div class="col-4">

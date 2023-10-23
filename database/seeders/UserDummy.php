@@ -15,25 +15,25 @@ class UserDummy extends Seeder
     {
         $userData = [
             [
-                'name' => 'Sabitha',
-                'email' => 'sabitha@gmail.com',
-                'role' => 'guest',
-                'password' => bcrypt('12345')
+               'name' => 'Kamarajendra',
+               'email' => 'jendra@gmail.com',
+               'role' => 'guest',
+               'password' => bcrypt('12345')
             ],
             [
-                'name' => 'Faizal',
-                'email' => 'faizal@gmail.com',
-                'role' => 'staff',
-                'password' => bcrypt('12345')
+               'name' => 'Jsven',
+               'email' => 'jsven@gmail.com',
+               'role' => 'staff',
+               'password' => bcrypt('12345')
             ],
             [
-                'name' => 'Kamarajendra',
-                'email' => 'kamarajendra@gmail.com',
-                'role' => 'admin',
-                'password' => bcrypt('12345')
+               'name' => 'Juan',
+               'email' => 'juan@gmail.com',
+               'role' => 'admin',
+               'password' => bcrypt('12345')
             ],
         ];
-        foreach ($userData as $key => $val) {
+        foreach($userData as $key => $val){
             User::create($val);
         }
     }

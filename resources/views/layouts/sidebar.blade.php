@@ -2,11 +2,11 @@
   <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/staff">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3" href="/staff">IT Inventory</div>
+        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
     </a>
 
     <!-- Divider -->
@@ -14,7 +14,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="/staff">
+        <a class="nav-link" href="index.html">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -31,28 +31,14 @@
     <li class="nav-item">
         <a class="nav-link" href="/staff/peminjam">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Peminjam</span></a>
+            <span>Pengunaan</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="/staff/items">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>All Items</span></a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/staff/user">
-            <i class="fas fa-fw fa-user"></i>
-            <span>List User</span></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/staff/type">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>List Type Items</span></a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/staff/opname">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Stok Opname</span></a>
-    </li>
+   
   
 
     <!-- Nav Item - Utilities Collapse Menu -->
@@ -92,24 +78,44 @@
     </li> --}}
 
     <!-- Nav Item - Charts -->
+    {{-- <li class="nav-item">
+        <a class="nav-link" href="/staff/user">
+            <i class="fas fa-fw fa-user"></i>
+            <span>List User</span></a>
+    </li> --}}
+    {{-- <li class="nav-item">
+        <a class="nav-link" href="/staff/unit">
+            <i class="fas fa-fw fa-user"></i>
+            <span>List Unit</span></a>
+    </li> --}}
     <li class="nav-item">
+        <a class="nav-link" href="/staff/specs">
+            <i class="fas fa-fw fa-user"></i>
+            <span>All Settings</span></a>
+    </li>
+    {{-- <li class="nav-item">
+        <a class="nav-link" href="/staff/role">
+            <i class="fas fa-fw fa-user"></i>
+            <span>List User Role</span></a>
+    </li> --}}
+    {{-- <li class="nav-item">
         <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Location</span></a>
-    </li>
+    </li> --}}
 
     <!-- Nav Item - Tables -->
-    <li class="nav-item">
+    {{-- <li class="nav-item">
         <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
             <span>State</span></a>
-    </li>
+    </li> --}}
 
-    <li class="nav-item">
+    {{-- <li class="nav-item">
         <a class="nav-link" href="/admin/user">
             <i class="fas fa-fw fa-user"></i>
             <span>User (Admin)</span></a>
-    </li>
+    </li> --}}
     <li class="nav-item">
         <a class="nav-link" href="/logout">
             <i class="fas fa-fw fa-arrow-left"></i>

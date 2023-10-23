@@ -20,5 +20,6 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ url('/sb_admin2/sbadmin2/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    
 
 </head>

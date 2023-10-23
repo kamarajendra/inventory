@@ -3,7 +3,7 @@
 @section('content')
    <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Item</h1>
+    <h1 class="h3 mb-0 text-gray-800">Stock Opname</h1>
 </div>
 
 <div id="content-wrapper" class="d-flex flex-column">
@@ -24,7 +24,7 @@
                                 <div class="col mr-2">
                                     <div
                                         class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                        Jumlah Type</div>
+                                        Total Items</div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">123</div>
                                 </div>
                                 <div class="col-auto">
@@ -40,7 +40,7 @@
                 <div class="col-4">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Tambah Barang
+                            Add Action
                           </button>
                           <!-- Modal -->
                         <form action="{{route('staff.items')}}" method="POST" enctype="multipart/form-data" >
@@ -115,15 +115,6 @@
                             </div>
                         </form>
 
-
-                        <button type="button" class="btn btn-danger" data-toggle="modal"
-                            data-target="#exampleModal">
-                            Barang Keluar
-                        </button>
-                        <button type="button" class="btn btn-info" data-toggle="modal"
-                            data-target="#exampleModal">
-                            Barang Pindah
-                        </button>
                         <form action="" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -216,9 +207,27 @@
                             <td>IT Internship</td>
                             <td>Karyawan</td>
                             <td>Core i3 - 4 GB - HDD 500</td>
-                            <td>Back Office Library</td>
                             <td>-</td>
+                            <td>Back Office Library</td>
                             <td>13-10-2023 15:03</td>
+                            <td>Sabitha</td>
+                            <td>
+                                <button class="btn btn-primary">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>SGH673QZKS</td>
+                            <td>202204525384</td>
+                            <td>HP</td>
+                            <td>ProDesk 500 G5</td>
+                            <td>Jendra</td>
+                            <td>IT Internship</td>
+                            <td>Karyawan</td>
+                            <td>Core i7 - 32 GB - SSD 1000</td>
+                            <td>-</td>
+                            <td>Back Office Library</td>
+                            <td>16-10-2023 13:42</td>
                             <td>Sabitha</td>
                             <td>
                                 <button class="btn btn-primary">Edit</button>
